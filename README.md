@@ -10,6 +10,25 @@ Add the esnext-rails to your Gemfile:
 gem 'esnext-rails'
 ```
 
+## Usage
+
+To have a JavaScript file compiled using esnext, append the `.esn` extension. For example:
+
+```js
+// application.js.esn
+
+class Point {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+}
+
+console.log(new Point(1, 2));
+```
+
+Requesting `/assets/application.js` will return the compiled version of this file.
+
 ## Running tests
 
 ```
