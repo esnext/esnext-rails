@@ -7,6 +7,7 @@ module Esnext
     class Engine < ::Rails::Engine
       config.before_initialize do |app|
         Sprockets.register_engine '.esn', Esnext::Rails::Template
+        Sprockets.register_engine '.esnext', Esnext::Rails::Template
       end
     end
   end

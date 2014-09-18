@@ -13,5 +13,8 @@ class TemplateTest < IntegrationTest
   test "esnext files are served as plain javascript" do
     get "/assets/application.js"
     assert_match "function Point(x, y)", @response.body
+
+    get "/assets/application-long-form.js"
+    assert_match "function Point(x, y)", @response.body
   end
 end
